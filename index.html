@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07110f" />
+  <meta name="description" content="Tristan Winata — software engineer building low-latency systems, ML tooling, and interactive software." />
+  <title>Tristan Winata — HedgehogDubz</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="page-glow glow-one" aria-hidden="true"></div>
+  <div class="page-glow glow-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <span class="brand-mark">//</span>
+      <span>HEDGEHOGDUBZ</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#about">about</a>
+      <a href="#work">work</a>
+      <a href="https://github.com/HedgehogDubz" target="_blank" rel="noreferrer">github ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> building things that move fast</div>
+        <h1>Hi, I’m <span class="accent">Tristan.</span></h1>
+        <p class="hero-lede">
+          CS + Math at Penn. I build low-latency systems, machine-learning tools, and interactive software — usually in C++, Python, TypeScript, or CUDA.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">See my work <span>↓</span></a>
+          <a class="button button-ghost" href="https://github.com/HedgehogDubz" target="_blank" rel="noreferrer">
+            GitHub <span>↗</span>
+          </a>
+        </div>
+        <div class="hero-meta" aria-label="Quick facts">
+          <div><span>focus</span><strong>systems · ML · infra</strong></div>
+          <div><span>currently</span><strong>Philadelphia, PA</strong></div>
+        </div>
+      </div>
+
+      <div class="viewer-wrap" aria-label="Interactive 3D hedgehog viewer">
+        <div class="viewer-topline">
+          <div>
+            <span class="terminal-prompt">$</span>
+            <span>./hedgehog --spin z</span>
+          </div>
+          <span class="viewer-live"><i></i> LIVE</span>
+        </div>
+        <div id="viewer" class="viewer">
+          <canvas id="hedgehog-canvas"></canvas>
+          <img class="viewer-fallback" src="assets/hedgehog-preview.png" alt="3D low-poly hedgehog" />
+          <div class="viewer-loading" id="viewer-loading">
+            <span class="loading-bar"><i></i></span>
+            <span>loading mesh</span>
+          </div>
+          <div class="axis-gizmo" aria-hidden="true">
+            <span class="axis x">X</span>
+            <span class="axis y">Y</span>
+            <span class="axis z">Z</span>
+          </div>
+          <div class="viewer-grid" aria-hidden="true"></div>
+        </div>
+        <div class="viewer-footer">
+          <span>X: 90°</span>
+          <span>Z: auto-rotate</span>
+          <span>drag to inspect</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>C++</span><i>✦</i><span>CUDA</span><i>✦</i><span>Python</span><i>✦</i><span>TypeScript</span><i>✦</i><span>Distributed Systems</span><i>✦</i><span>Machine Learning</span><i>✦</i>
+        <span>C++</span><i>✦</i><span>CUDA</span><i>✦</i><span>Python</span><i>✦</i><span>TypeScript</span><i>✦</i><span>Distributed Systems</span><i>✦</i><span>Machine Learning</span><i>✦</i>
+      </div>
+    </section>
+
+    <section id="about" class="about shell section-pad">
+      <div class="section-kicker">01 / ABOUT</div>
+      <div class="about-grid">
+        <h2>I like software you can <span class="accent">feel.</span></h2>
+        <div class="about-copy">
+          <p>
+            I’m interested in the line where performance, systems design, and useful interfaces meet. That’s led me from market-data transport and ML-from-scratch work to GPU-accelerated neuroscience tooling.
+          </p>
+          <p>
+            My favorite projects have a hard constraint somewhere: latency, throughput, messy real-world data, or a UI that has to make something complicated immediately understandable.
+          </p>
+          <div class="skill-row">
+            <span>C++</span><span>Python</span><span>TypeScript</span><span>CUDA</span><span>Linux</span><span>Docker</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work shell section-pad">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">02 / SELECTED WORK</div>
+          <h2>Repos worth opening.</h2>
+        </div>
+        <a class="text-link" href="https://github.com/HedgehogDubz?tab=repositories" target="_blank" rel="noreferrer">all repositories ↗</a>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-card-wide">
+          <a class="project-visual-link" href="https://github.com/HedgehogDubz/Mega-Feed-Handler" target="_blank" rel="noreferrer" aria-label="Open Mega Feed Handler on GitHub">
+            <div class="project-visual market-visual">
+              <canvas data-visual="market"></canvas>
+              <div class="visual-label">LIVE MARKET FEED // SIMULATED</div>
+            </div>
+          </a>
+          <div class="project-body">
+            <div class="project-index">01</div>
+            <div class="project-title-row">
+              <h3>Mega Feed Handler</h3>
+              <a class="repo-arrow" href="https://github.com/HedgehogDubz/Mega-Feed-Handler" target="_blank" rel="noreferrer" aria-label="Open repo">↗</a>
+            </div>
+            <p>Low-latency market-data plumbing: replay order-by-order feeds over UDP multicast, rebuild price levels, and recover dropped packets with sequenced retransmission.</p>
+            <div class="tags"><span>C++</span><span>UDP</span><span>TCP</span><span>Market Data</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-visual-link" href="https://github.com/HedgehogDubz/RiverML-Machine-Learning-Pipeline" target="_blank" rel="noreferrer" aria-label="Open RiverML on GitHub">
+            <div class="project-visual neural-visual">
+              <canvas data-visual="river"></canvas>
+              <div class="visual-label">TRAINING // EPOCH <span data-counter="epoch">128</span></div>
+            </div>
+          </a>
+          <div class="project-body">
+            <div class="project-index">02</div>
+            <div class="project-title-row">
+              <h3>RiverML</h3>
+              <a class="repo-arrow" href="https://github.com/HedgehogDubz/RiverML-Machine-Learning-Pipeline" target="_blank" rel="noreferrer" aria-label="Open repo">↗</a>
+            </div>
+            <p>An end-to-end ML pipeline built largely from scratch, including neural nets, evolutionary training, backpropagation, momentum, and boosted trees.</p>
+            <div class="tags"><span>C++</span><span>TypeScript</span><span>ML</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-visual-link" href="https://github.com/HedgehogDubz/Machine-Learning-Visualizer" target="_blank" rel="noreferrer" aria-label="Open Machine Learning Visualizer on GitHub">
+            <div class="project-visual boundary-visual">
+              <canvas data-visual="boundary"></canvas>
+              <div class="visual-label">DECISION SURFACE // ITERATING</div>
+            </div>
+          </a>
+          <div class="project-body">
+            <div class="project-index">03</div>
+            <div class="project-title-row">
+              <h3>ML Visualizer</h3>
+              <a class="repo-arrow" href="https://github.com/HedgehogDubz/Machine-Learning-Visualizer" target="_blank" rel="noreferrer" aria-label="Open repo">↗</a>
+            </div>
+            <p>A visual, interactive way to watch neural networks learn instead of treating training as a black box.</p>
+            <div class="tags"><span>TypeScript</span><span>Canvas</span><span>Visualization</span></div>
+          </div>
+        </article>
+
+        <article class="project-card project-card-wide">
+          <a class="project-visual-link" href="https://github.com/HedgehogDubz/TabDock" target="_blank" rel="noreferrer" aria-label="Open TabDock on GitHub">
+            <div class="project-visual dock-visual" data-visual="dock">
+              <div class="dock-window window-a"><div></div><span>Inspector</span></div>
+              <div class="dock-window window-b"><div></div><span>Viewport</span></div>
+              <div class="dock-window window-c"><div></div><span>Console</span></div>
+              <div class="dock-target"></div>
+              <div class="visual-label">DRAG · SNAP · DOCK</div>
+            </div>
+          </a>
+          <div class="project-body">
+            <div class="project-index">04</div>
+            <div class="project-title-row">
+              <h3>TabDock</h3>
+              <a class="repo-arrow" href="https://github.com/HedgehogDubz/TabDock" target="_blank" rel="noreferrer" aria-label="Open repo">↗</a>
+            </div>
+            <p>A Python UI framework built around tabs and dockable panels — a small component system for tools that need flexible workspaces.</p>
+            <div class="tags"><span>Python</span><span>UI</span><span>Framework</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta shell">
+      <div class="cta-card">
+        <div class="cta-ascii" aria-hidden="true">
+<pre>  /\_/\\
+ ( o.o )  &lt; build weird things
+  &gt; ^ &lt;</pre>
+        </div>
+        <div>
+          <div class="section-kicker">03 / ELSEWHERE</div>
+          <h2>More code. Fewer buzzwords.</h2>
+        </div>
+        <a class="button button-primary" href="https://github.com/HedgehogDubz" target="_blank" rel="noreferrer">@HedgehogDubz ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <span>Tristan Winata</span>
+    <span>built with Three.js + an aggressively spiky hedgehog</span>
+    <a href="#top">back to top ↑</a>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
